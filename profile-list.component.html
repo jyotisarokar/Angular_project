@@ -1,0 +1,11 @@
+<div *ngFor="let profile of profiles">
+    <div>
+      <img [src]="profile.photo" alt="{{profile.name}}" />
+      <h3>{{profile.name}}</h3>
+      <p>{{profile.description}}</p>
+      <button (click)="showProfile(profile)">Summary</button>
+    </div>
+  </div>
+  
+  <app-profile-map *ngIf="selectedProfile" [profile]="selectedProfile"></app-profile-map>
+  
